@@ -115,3 +115,8 @@ td[contentEditable=true]:focus {
 }
 
 /* Add more styling as needed */
+ body{
+  background-color: #61dafb;
+  padding: 20px;
+
+ }
