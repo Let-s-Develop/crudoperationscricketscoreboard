@@ -46,12 +46,15 @@ function App() {
   return (
     <div className="App">
       <div class="row">
-        <div class="col-md-4">
+        <div class="d-flex justify-content-around">
+        <div class="col-3">
         <img src="https://png.pngtree.com/png-clipart/20230518/original/pngtree-cricket-logo-vector-and-clipart-with-transparent-background-for-free-download-png-image_9163535.png" alt="" class="image-edit"/>
         </div>
-        <div class="col-md-4">
+        <div class="col-9">
         <h1 class="heading-change">CRICKET SCORE BOARD</h1>
         </div>
+        </div>
+        
         
       </div>
      

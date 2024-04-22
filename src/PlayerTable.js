@@ -13,7 +13,7 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
   };
 
   return (
-    <div className="player-table p-5">
+    <div className="player-table p-1">
       <div className="team">
         <h2>Team 1</h2>
         <table>
@@ -61,12 +61,12 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
         <button className="btn-edit-2" onClick={() => onAddPlayer('team1')}>Add Player</button>
       </div>
 
-      <div className="team">
+      <div className="team p-1">
         <h2>Team 2</h2>
         <table>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Name</th> 
               <th>Runs</th>
               <th>Balls</th>
               <th>Dots</th>

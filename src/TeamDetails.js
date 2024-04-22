@@ -55,7 +55,7 @@ const TeamDetails = ({ team1, team2 }) => {
   };
 
   return (
-    <div className="team-details">
+    <div className="team-details p-1">
       <h2>Team Details</h2>
       <div className="team-info">
         <div className="team-info-box">
