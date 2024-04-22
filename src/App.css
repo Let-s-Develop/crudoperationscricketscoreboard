@@ -106,17 +106,32 @@ th, td {
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #7eddf5;
 }
 
 td[contentEditable=true]:focus {
   outline: none;
-  background-color: #f0f0f0;
+  background-color: #10e4e0;
 }
 
 /* Add more styling as needed */
  body{
-  background-color: #61dafb;
-  padding: 20px;
 
+  text-align: center;
+  padding: 20px;
+  color:white; 
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+ }
+
+ .image-edit{
+  width: 20%;
+ }
+
+ .btn-edit-2{
+  background-color: rgb(244, 244, 245);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
  }

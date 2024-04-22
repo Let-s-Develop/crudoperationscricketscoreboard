@@ -45,7 +45,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Cricket Scoreboard</h1>
+      <div class="row">
+        <div class="col-md-4">
+        <img src="https://png.pngtree.com/png-clipart/20230518/original/pngtree-cricket-logo-vector-and-clipart-with-transparent-background-for-free-download-png-image_9163535.png" alt="" class="image-edit"/>
+        </div>
+        <div class="col-md-4">
+        <h1 class="heading-change">CRICKET SCORE BOARD</h1>
+        </div>
+        
+      </div>
+     
+       
+     
       <PlayerTable
         team1={team1}
         team2={team2}

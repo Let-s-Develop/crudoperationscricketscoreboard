@@ -13,7 +13,7 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
   };
 
   return (
-    <div className="player-table">
+    <div className="player-table p-5">
       <div className="team">
         <h2>Team 1</h2>
         <table>
@@ -58,7 +58,7 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
             ))}
           </tbody>
         </table>
-        <button onClick={() => onAddPlayer('team1')}>Add Player</button>
+        <button className="btn-edit-2" onClick={() => onAddPlayer('team1')}>Add Player</button>
       </div>
 
       <div className="team">
@@ -99,13 +99,13 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
                 </td>
                 <td>{((player.runs / player.balls) * 100).toFixed(2)}</td>
                 <td>
-                  <button onClick={() => onRemovePlayer('team2', player.id)}>Remove</button>
+                  <button  onClick={() => onRemovePlayer('team2', player.id)}>Remove</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <button onClick={() => onAddPlayer('team2')}>Add Player</button>
+        <button className="btn-edit-2" onClick={() => onAddPlayer('team2')}>Add Player</button>
       </div>
     </div>
   );

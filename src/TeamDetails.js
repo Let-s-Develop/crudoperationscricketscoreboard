@@ -105,13 +105,13 @@ const TeamDetails = ({ team1, team2 }) => {
                 </td>
                 <td>{calculateAverage(bowler.runs, bowler.overs)}</td>
                 <td>
-                  <button onClick={() => removeBowler('team1', bowler.id)}>Remove</button>
+                  <button className="btn-edit-2" onClick={() => removeBowler('team1', bowler.id)}>Remove</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <button onClick={() => addBowler('team1')}>Add Bowler</button>
+        <button className="btn-edit-2" onClick={() => addBowler('team1')}>Add Bowler</button>
         <h2>Team 2 Bowling Details</h2>
         <table>
           <thead>
@@ -149,13 +149,13 @@ const TeamDetails = ({ team1, team2 }) => {
                 </td>
                 <td>{calculateAverage(bowler.runs, bowler.overs)}</td>
                 <td>
-                  <button onClick={() => removeBowler('team2', bowler.id)}>Remove</button>
+                  <button className="btn-edit-2" onClick={() => removeBowler('team2', bowler.id)}>Remove</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <button onClick={() => addBowler('team2')}>Add Bowler</button>
+        <button className="btn-edit-2" onClick={() => addBowler('team2')}>Add Bowler</button>
       </div>
     </div>
   );
