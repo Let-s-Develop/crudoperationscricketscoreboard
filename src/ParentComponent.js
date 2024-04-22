@@ -1,10 +1,8 @@
-// App.js
+// ParentComponent.js
 import React, { useState } from 'react';
 import PlayerTable from './PlayerTable';
-import TeamDetails from './TeamDetails';
-import './App.css';
 
-function App() {
+const ParentComponent = () => {
   const [team1, setTeam1] = useState([]);
   const [team2, setTeam2] = useState([]);
 
@@ -25,8 +23,7 @@ function App() {
       dots: 0,
       fours: 0,
       sixes: 0,
-      twos: 0,
-      ones: 0,
+      
     };
     if (team === 'team1') {
       setTeam1([...team1, newPlayer]);
@@ -44,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <h1>Cricket Scoreboard</h1>
       <PlayerTable
         team1={team1}
@@ -53,11 +50,8 @@ function App() {
         onAddPlayer={addPlayer}
         onRemovePlayer={removePlayer}
       />
-      <TeamDetails team1={team1} team2={team2} />
-
     </div>
-    
   );
-}
+};
 
-export default App;
+export default ParentComponent;
