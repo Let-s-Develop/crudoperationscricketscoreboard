@@ -147,7 +147,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 
 .scrolling-text {
   display: inline-block;
-  animation: scrollLeft 50s linear infinite;
+  animation: scrollLeft 100s linear infinite;
 }
 
 @keyframes scrollLeft {
