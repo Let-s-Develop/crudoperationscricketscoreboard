@@ -13,7 +13,18 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
   };
 
   return (
+    
     <div className="player-table p-1">
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Team-1 Batting Details
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
       <div className="team">
         <h2>Team 1</h2>
         <table>
@@ -60,8 +71,18 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
         </table>
         <button className="btn-edit-2" onClick={() => onAddPlayer('team1')}>Add Player</button>
       </div>
-
-      <div className="team p-1">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Team-2 Batting Batting
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div className="team">
         <h2>Team 2</h2>
         <table>
           <thead>
@@ -107,6 +128,14 @@ const PlayerTable = ({ team1 = [], team2 = [], onUpdate, onAddPlayer, onRemovePl
         </table>
         <button className="btn-edit-2" onClick={() => onAddPlayer('team2')}>Add Player</button>
       </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+      
+
+     
     </div>
   );
 };

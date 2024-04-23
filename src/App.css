@@ -36,9 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.team-details {
-  margin-top: 20px;
-}
+
 
 .team-info {
   display: flex;
@@ -77,9 +75,7 @@
 }
 
 /* Add more styling as needed */
-.team-details {
-  margin-top: 20px;
-}
+
 
 .team-info {
   display: flex;
@@ -90,9 +86,7 @@
   text-align: center;
 }
 
-.bowling-details {
-  margin-top: 20px;
-}
+
 
 table {
   width: 100%;
@@ -116,7 +110,7 @@ td[contentEditable=true]:focus {
 
 /* Add more styling as needed */
  body{
-padding: 5px;
+
   text-align: center;
   
   color:white; 
@@ -140,3 +134,48 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
   color: chartreuse;
   font-size: 30px;
  }
+
+ .table-content{
+  overflow: auto;
+ }
+
+ .scrolling-text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scrollLeft 50s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-container{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: black;
+
+  border-radius: 20px;
+  
+
+}
+ .team{
+  overflow: auto;
+  scroll-behavior: auto;
+ }
+
+ .match-summary-table{
+  overflow: auto;
+ }
+ 

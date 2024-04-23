@@ -55,21 +55,19 @@ const TeamDetails = ({ team1, team2 }) => {
   };
 
   return (
-    <div className="team-details p-1">
-      <h2>Team Details</h2>
-      <div className="team-info">
-        <div className="team-info-box">
-          <h3>Team 1</h3>
-          <p>Team Score: {team1.reduce((total, player) => total + player.runs, 0)}</p>
-        </div>
-        <div className="team-info-box">
-          <h3>Team 2</h3>
-          <p>Team Score: {team2.reduce((total, player) => total + player.runs, 0)}</p>
-        </div>
-      </div>
-      <div className="bowling-details">
-        <h2>Team 1 Bowling Details</h2>
-        <table>
+    
+    <div className="team-details">
+      
+  <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        team-1 bowling Details
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body table-content">
+      <table  >
           <thead>
             <tr>
               <th>Bowler</th>
@@ -112,8 +110,18 @@ const TeamDetails = ({ team1, team2 }) => {
           </tbody>
         </table>
         <button className="btn-edit-2" onClick={() => addBowler('team1')}>Add Bowler</button>
-        <h2>Team 2 Bowling Details</h2>
-        <table>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        team-1 bowling Details
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body table-content">
+      <table  >
           <thead>
             <tr>
               <th>Bowler</th>
@@ -127,35 +135,66 @@ const TeamDetails = ({ team1, team2 }) => {
             </tr>
           </thead>
           <tbody>
-            {bowlingDetails.team2.map(bowler => (
+            {bowlingDetails.team1.map(bowler => (
               <tr key={bowler.id}>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'bowler', e.target.innerText)}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'bowler', e.target.innerText)}>
                   {bowler.bowler}
                 </td>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'overs', parseInt(e.target.innerText))}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'overs', parseInt(e.target.innerText))}>
                   {bowler.overs}
                 </td>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'runs', parseInt(e.target.innerText))}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'runs', parseInt(e.target.innerText))}>
                   {bowler.runs}
                 </td>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'fours', parseInt(e.target.innerText))}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'fours', parseInt(e.target.innerText))}>
                   {bowler.fours}
                 </td>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'sixes', parseInt(e.target.innerText))}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'sixes', parseInt(e.target.innerText))}>
                   {bowler.sixes}
                 </td>
-                <td contentEditable="true" onBlur={(e) => handleInputChange('team2', bowler.id, 'extras', parseInt(e.target.innerText))}>
+                <td contentEditable="true" onBlur={(e) => handleInputChange('team1', bowler.id, 'extras', parseInt(e.target.innerText))}>
                   {bowler.extras}
                 </td>
                 <td>{calculateAverage(bowler.runs, bowler.overs)}</td>
                 <td>
-                  <button className="btn-edit-2" onClick={() => removeBowler('team2', bowler.id)}>Remove</button>
+                  <button className="btn-edit-2" onClick={() => removeBowler('team1', bowler.id)}>Remove</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <button className="btn-edit-2" onClick={() => addBowler('team2')}>Add Bowler</button>
+        <button className="btn-edit-2" onClick={() => addBowler('team1')}>Add Bowler</button>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Score board
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div className="team-info">
+        <div className="team-info-box">
+          <h3>Team 1</h3>
+          <p>Team Score: {team1.reduce((total, player) => total + player.runs, 0)}</p>
+        </div>
+        <div className="team-info-box">
+          <h3>Team 2</h3>
+          <p>Team Score: {team2.reduce((total, player) => total + player.runs, 0)}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+      </div>
+      
+    
+      <div>
+        
+        
       </div>
     </div>
   );
